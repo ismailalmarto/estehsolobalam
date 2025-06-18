@@ -3,28 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hubungi Kami</title>
+  <title>Kontak Saya</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f3f4f6;
+      background: url('https://images.unsplash.com/photo-1622266328994-7852046ef21f?auto=format&fit=crop&w=800&q=80') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      height: 100vh;
+      color: white;
+    }
+
+    /* Overlay hitam transparan */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6); /* warna hitam transparan */
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      height: 100%;
       padding: 2rem;
-    }
-    .container {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 100%;
       text-align: center;
     }
-    h1 {
-      margin-bottom: 1rem;
+
+    .box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      backdrop-filter: blur(8px);
     }
+
+    h1 {
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
     a {
       display: block;
       margin: 0.5rem 0;
@@ -34,6 +62,7 @@
       color: white;
       font-weight: bold;
     }
+
     .wa { background: #25D366; }
     .ig { background: #E1306C; }
     .tt { background: #000000; }
@@ -41,12 +70,15 @@
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
   <div class="container">
-    <h1>Es Teh Solo Bandar Lampung</h1>
-    <a class="wa" href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
-    <a class="ig" href="https://instagram.com/nama_kamu" target="_blank">Instagram</a>
-    <a class="tt" href="https://tiktok.com/@nama_kamu" target="_blank">TikTok</a>
-    <a class="fb" href="https://facebook.com/nama_kamu" target="_blank">Facebook</a>
+    <div class="box">
+      <h1>Es Teh Solo Bandar Lampung</h1>
+      <a class="wa" href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+      <a class="ig" href="https://instagram.com/nama_kamu" target="_blank">Instagram</a>
+      <a class="tt" href="https://tiktok.com/@nama_kamu" target="_blank">TikTok</a>
+      <a class="fb" href="https://facebook.com/nama_kamu" target="_blank">Facebook</a>
+    </div>
   </div>
 </body>
 </html>
